@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2815E2;
+}
+body{
+    animation: show;
+    animation-duration: 1s;
+    background-color: #28E3C9;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+@keyframes show{
+    0%{
+        opacity: 0.3
+}
+25%{
+    opacity: 0.5
+}
+50%{
+    opacity: 0.60
+}
+75%{
+    opacity: 0.75
+}
+    100%{
+        opacity: 1
+    }
+}
+#alumno{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1em;
+    background-color: #28154F;
+    display: flex;
+    width: 100%;
+    position: relative;
+    min-width: 850px;
+    
+}
+#alumno>img{
+    max-height: 120px;
+    border-radius: 5em;
+    flex-wrap: wrap;
+}
+#alumnoData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    left: 150px;
+    top: -10px;
+    
+}
+#aprobadosInvisibles{
+    font-size: 1em ;
+}
+#nombre{
+    color: #9DF9DC;
+}
+#alumnoNotas{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+#cajaInvisible{
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(175, 235, 231);
+    border-radius: 0.5em;
+    top: 45px;
+    padding: 10px;
+}
+#cajaInvisibleAlumnos{
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(175, 235, 231);
+    border-radius: 0.5em;
+    top: 45px;
+    left: -13px;
+    padding: 17px;
+    z-index: 3;
+}
+
+#aprobadosInvisibles{
+    font-size: 1em;
+}
+.notas:hover ~ #cajaInvisible{
+    opacity: 1;
+    color: #87DA7A;
+    transition: 0.5s;
+}
+#flecha{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(175, 235, 231);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -5px;
+    left: 13px;
+}
+#relativo{
+    position: relative;
+}
+#numAprobados:hover > #cajaInvisibleAlumnos{
+    opacity: 1;
+    color: #87DA7A;
+    transition: 0.5s;
+}
+#numSuspensos:hover > #cajaInvisibleAlumnos{
+    opacity: 1;
+    color: #87DA7A;
+    transition: 0.5s;
+}
+.notas{
+    font-size: 2em;
+    color: #87DA7A;
+    position: static;
+}
+.cajaNotasAlumno{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#resumenInner, #resumenInner::after{
+    padding: 10px;
+    margin-top: 20px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #8AADD8;
+}
+
+#resumenInner h3, #resumenInner>span{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#numSuspensos{
+    color: red;
+    position: relative;
+}
+#numAprobados{
+    color: rgba(10, 247, 10, 0.734);
+    position: relative;
+}
+.cajaNotasAlumno>p{
+    display: flex;
+    flex-direction: column;
+}
+#mejorAlumno{
+    color: #28154F;
+    
+}
+#cajaMejorAlumno{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+#fotoMejorAlumno{
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    margin-left: 20px;
+    max-height: 120px;
+    border-radius: 5em;
+    
+}
+#mejorAlumno:hover~#fotoMejorAlumno{
+    opacity: 1;
+    animation: show 0.5s;
+}
+.footerText{
+    text-align: center;
+    color: #28154F;
+    font-size: 2em;
+}
+#anno{
+    color: #28154F !important;
+}
